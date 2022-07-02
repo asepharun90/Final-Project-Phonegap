@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<link rel="stylesheet" href="css/format.css">
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+        crossorigin="anonymous"></script>
+<script>
+    window.onload = function()
+        {
+            document.getElementById('btnBeli').addEventListener('click', Beli);
+            document.getElementById('btnBeli_1').addEventListener('click', Beli_1);
+            document.getElementById('btnBeli_2').addEventListener('click', Beli_2);
+            document.getElementById('btnBeli_3').addEventListener('click', Beli_3);            
+        }
+
+    function Beli(e)
+        {
+            var nama = document.getElementById('nama').value; 
+                localStorage.setItem("Nama", nama); 
+            var no_hp = document.getElementById('no_hp').value;  
+                localStorage.setItem("No HP", no_hp);        
+            var alamat = document.getElementById('alamat').value;  
+                localStorage.setItem("Alamat", alamat);
+            var banyak = document.getElementById('banyak').value;  
+                localStorage.setItem("Banyak", banyak);    
+            var bayar = document.getElementById('bayar').value;
+                localStorage.setItem("Pembayaran", bayar);
+            
+
+            var nama = localStorage.getItem('Nama');  
+            document.getElementById('a').innerHTML = nama;
+            var no_hp = localStorage.getItem('No HP');  
+            document.getElementById('b').innerHTML = no_hp;
+            var alamat = localStorage.getItem('Alamat');  
+            document.getElementById('c').innerHTML = alamat;
+            var bayar = localStorage.getItem('Pembayaran');
+            document.getElementById('d').innerHTML = bayar;
+            var banyak = localStorage.getItem('Banyak');
+            document.getElementById('e').innerHTML = banyak;
+
+
+
+            localStorage.setItem('produk_1', 'Kemeja A');
+            localStorage.setItem('harga_1', '75000');
+            localStorage.setItem('ongkir_1', '11000');
+
+            var produk_1 = localStorage.getItem('produk_1');  
+                document.getElementById('produk_1').innerHTML = produk_1;
+            var harga_1 = localStorage.getItem('harga_1');  
+                document.getElementById('harga_1').innerHTML = "Rp. " + harga_1;
+            var ongkir_1 = localStorage.getItem('ongkir_1');
+                document.getElementById('ongkir_1').innerHTML = "Rp. " + ongkir_1;
+
+            var total = "Rp. " + (parseInt(harga_1) * parseInt(banyak) + parseInt(ongkir_1));
+            document.getElementById('f').innerHTML = total;    
+        }
+
+
+    function Beli_1(e)
+        {
+            var nama_2 = document.getElementById('nama_2').value; 
+                localStorage.setItem("Nama_2", nama_2); 
+            var no_hp_2 = document.getElementById('no_hp_2').value;  
+                localStorage.setItem("No HP_2", no_hp_2);        
+            var alamat_2 = document.getElementById('alamat_2').value;  
+                localStorage.setItem("Alamat_2", alamat_2);
+              var banyak_2 = document.getElementById('banyak_2').value;  
+                localStorage.setItem("Banyak_2", banyak_2);    
+            var bayar_2 = document.getElementById('bayar_2').value;
+                localStorage.setItem("Pembayaran_2", bayar_2);
+            var banyak_2 = localStorage.getItem('Banyak_2');
+            document.getElementById('e_2').innerHTML = banyak_2;
+
+            var nama_2 = localStorage.getItem('Nama_2');  
+            document.getElementById('a_2').innerHTML = nama_2;
+            var no_hp_2 = localStorage.getItem('No HP_2');  
+            document.getElementById('b_2').innerHTML = no_hp_2;
+            var alamat_2 = localStorage.getItem('Alamat_2');  
+            document.getElementById('c_2').innerHTML = alamat_2;
+            var bayar_2 = localStorage.getItem('Pembayaran_2');
+            document.getElementById('d_2').innerHTML = bayar_2;
+
+            localStorage.setItem('produk_2', 'Kemeja B');
+            localStorage.setItem('harga_2', '85000');
+            localStorage.setItem('ongkir_2', '11000');
+            var produk_2 = localStorage.getItem('produk_2');  
+                document.getElementById('produk_2').innerHTML = produk_2;
+            var harga_2 = localStorage.getItem('harga_2');  
+                document.getElementById('harga_2').innerHTML = "Rp. " + harga_2;
+            var ongkir_2 = localStorage.getItem('ongkir_2');
+                document.getElementById('ongkir_2').innerHTML = "Rp. " + ongkir_2;
+
+            var total_2 = "Rp. " + (parseInt(harga_2) * parseInt(banyak_2) + parseInt(ongkir_2));
+            document.getElementById('f_2').innerHTML = total_2;    
+        }            
+
+
+    function Beli_2(e)
+        {
+            var nama_3 = document.getElementById('nama_3').value; 
+                localStorage.setItem("Nama_3", nama_3); 
+            var no_hp_3 = document.getElementById('no_hp_3').value;  
+                localStorage.setItem("No HP_3", no_hp_3);        
+            var alamat_3 = document.getElementById('alamat_3').value;  
+                localStorage.setItem("Alamat_3", alamat_3);
+            var banyak_3 = document.getElementById('banyak_3').value;  
+                localStorage.setItem("Banyak_3", banyak_3);            
+            var bayar_3 = document.getElementById('bayar_3').value;
+                localStorage.setItem("Pembayaran_3", bayar_3);
+
+            var nama_3 = localStorage.getItem('Nama_3');  
+            document.getElementById('a_3').innerHTML = nama_3;
+            var no_hp_3 = localStorage.getItem('No HP_3');  
+            document.getElementById('b_3').innerHTML = no_hp_3;
+            var alamat_3 = localStorage.getItem('Alamat_3');  
+            document.getElementById('c_3').innerHTML = alamat_3;
+            var bayar_3 = localStorage.getItem('Pembayaran_3');
+            document.getElementById('d_3').innerHTML = bayar_3;
+            var banyak_3 = localStorage.getItem('Banyak_3');
+            document.getElementById('e_3').innerHTML = banyak_3;
+
+            localStorage.setItem('produk_3', 'Kemeja C');
+            localStorage.setItem('harga_3', '95000');
+            localStorage.setItem('ongkir_3', '11000');
+            var produk_3 = localStorage.getItem('produk_3');  
+                document.getElementById('produk_3').innerHTML = produk_3;
+            var harga_3 = localStorage.getItem('harga_3');  
+                document.getElementById('harga_3').innerHTML = "Rp. " + harga_3;
+            var ongkir_3 = localStorage.getItem('ongkir_3');
+                document.getElementById('ongkir_3').innerHTML = "Rp. " + ongkir_3;
+
+            var total_3 = "Rp. " + (parseInt(harga_3) * parseInt(banyak_3) + parseInt(ongkir_3));
+            document.getElementById('f_3').innerHTML = total_3;    
+
+        }            
+
+
+    function Beli_3(e)
+        {
+            var nama_4 = document.getElementById('nama_4').value; 
+                localStorage.setItem("Nama_4", nama_4); 
+            var no_hp_4 = document.getElementById('no_hp_4').value;  
+                localStorage.setItem("No HP_4", no_hp_4);        
+            var alamat_4 = document.getElementById('alamat_4').value;  
+                localStorage.setItem("Alamat_4", alamat_4);
+            var banyak_4 = document.getElementById('banyak_4').value;  
+                localStorage.setItem("Banyak_4", banyak_4);            
+            var bayar_4 = document.getElementById('bayar_4').value;
+                localStorage.setItem("Pembayaran_4", bayar_4);
+
+            var nama_4 = localStorage.getItem('Nama_4');  
+            document.getElementById('a_4').innerHTML = nama_4;
+            var no_hp_4 = localStorage.getItem('No HP_4');  
+            document.getElementById('b_4').innerHTML = no_hp_4;
+            var alamat_4 = localStorage.getItem('Alamat_4');  
+            document.getElementById('c_4').innerHTML = alamat_4;
+            var bayar_4 = localStorage.getItem('Pembayaran_4');
+            document.getElementById('d_4').innerHTML = bayar_4;
+            var banyak_4 = localStorage.getItem('Banyak_4');
+            document.getElementById('e_4').innerHTML = banyak_4;
+
+            localStorage.setItem('produk_4', 'Kemeja D');
+            localStorage.setItem('harga_4', '105000');
+            localStorage.setItem('ongkir_4', '11000');
+            var produk_4 = localStorage.getItem('produk_4');  
+                document.getElementById('produk_4').innerHTML = produk_4;
+            var harga_4 = localStorage.getItem('harga_4');  
+                document.getElementById('harga_4').innerHTML = "Rp. " + harga_4;
+            var ongkir_4 = localStorage.getItem('ongkir_4');
+                document.getElementById('ongkir_4').innerHTML = "Rp. " + ongkir_4;
+
+            var total_4 = "Rp. " + (parseInt(harga_4) * parseInt(banyak_4) + parseInt(ongkir_4));
+            document.getElementById('f_4').innerHTML = total_4;
+        }
+
+
+                     
+</script>       
+
+<style>
+
+    
+    .grid{
+        margin: 65px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 30px;
+        align-items: center;
+    }
+
+    .grid > article{
+        background: #3d332a;
+        border: none;
+        box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+        border-radius: 20px;
+        text-align: center;
+        width: 280px;
+        transition: transform .3s;
+    }
+
+    .grid > article:hover{
+        transform: translateY(5px);
+        box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    }
+
+    .grid > article img{
+        width:100%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    .text{
+        color: whitesmoke;
+        padding: 0 20px 20px;
+    }
+
+    .text h4{
+        text-transform: uppercase;
+    }
+
+    .text p{
+      text-align: justify;
+    }
+
+    @media (max-width: 768px){
+        .grid{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 500px){
+        .grid{
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    .grid > article{
+        text-align: center;
+    }
+
+    .produk{
+        display: grid;
+        grid-template-columns: repeat(1fr);
+        grid-gap: 30px;
+        align-items: center;
+    }
+
+    .produk > article{
+        background: #3d332a;
+        border: none;
+        box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+        border-radius: 20px;
+        text-align: center;
+        margin: auto;
+    }
+
+    .produk > article:hover{
+        transform: translateY(5px);
+        box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    }
+
+    .produk > article img{
+        width:100%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    .pemesan{
+        display: grid;
+        grid-template-columns: repeat(1fr);
+        grid-gap: 30px;
+        align-items: center;
+    }
+
+    .pemesan > article{
+        width: 95%;
+        height: 95%;
+        margin: auto;
+        background: #3d332a;
+        border: none;
+        box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+        border-radius: 20px;
+        text-align: center;
+        
+    }
+
+    .text_pesanan{
+        text-align: left;
+        color: whitesmoke;
+    }
+
+    .text_pesanan h3{
+        text-transform: uppercase;
+    }
+    #beli  
+    {
+    margin: 10px;
+    }
+
+</style>
+</head>
+
+<body>
+<div data-role="page" id="home">
+  <div data-role="header">    
+    <h1><b>DISTRO MURAH</b></h1>
+  </div>
+  
+
+<!--List Produk-->
+<div class="container">
+    <main class="grid">
+    <article>
+        <img src="img/kemeja_9.jpg" alt="">
+        <div class="text">
+            <h4>Kemeja A</h4>
+            <h4 >Rp 75.000,-</h4>
+            <a href="index.html#Kemeja_1" class="ui-btn">Detail</a>
+            <a href="index.html#Beli_1" class="ui-btn">Beli</a>
+        </div>
+    </article>
+
+    <article>
+        <img src="img/kemeja_3.png" alt="">
+        <div class="text">
+            <h4>Kemeja B</h4>
+            <h4>Rp 85.000,-</h4>
+            <a href="index.html#Kemeja_2" class="ui-btn">Detail</a>
+            <a href="index.html#Beli_2" class="ui-btn">Beli</a>        
+        </div>
+    </article>
+
+    <article>
+        <img src="img/kemeja_4.jpg" alt="">
+        <div class="text">
+            <h4>Kemeja C</h4>
+            <h4>Rp 95.000,-</h4>
+            <a href="index.html#Kemeja_3" class="ui-btn">Detail</a>
+            <a href="index.html#Beli_3" class="ui-btn">Beli</a>
+        </div>
+    </article>
+
+    <article>
+        <img src="img/kemeja_8.jpg" alt="">
+        <div class="text">
+            <h4>Kemeja D</h4>
+            <h4>Rp 105.000,-</h4>
+            <a href="index.html#Kemeja_4" class="ui-btn">Detail</a>
+            <a href="index.html#Beli_4" class="ui-btn">Beli</a>
+        </div>
+    </article>
+  </main>
+</div>
+</div>
+
+
+<!--Detail Produk-->
+<div data-role="page" id="Kemeja_1">
+    <div data-role="main" class="ui-content">
+        <div data-role="controlgroup" data-type="horizontal" >
+        <a href="index.html#home" class="ui-btn ui-icon-back ui-btn-icon-left" >Kembali</a>
+        <a href="index.html#pesanan_1" class="ui-btn ui-icon-shop ui-btn-icon-left" >Pesanan</a>
+        </div>
+
+<div class="detail">
+    <main class="produk">
+    <article>
+        <img src="img/kemeja_9.jpg" alt="">
+        <div class="text">
+            <h4>Kemeja A</h4>
+            <h4>Rp 75.000,-</h4>
+            <a href="index.html#Beli_1" class="ui-btn">Beli</a>
+            <p>
+            Kemeja Lengan Panjang Pria Slim Fit untuk anda yang ingin tampil lebih percaya diri . Kemeja yang memiliki desain slim fit membuat kemeja ini pas di tubuh anda dan tampilan anda semakin lebih bergaya dan rapi. Material Cotton membuat baju ini nyaman ketika di pakai.</p>
+            <p>
+            Kemeja lengan panjang slim fit ini cocok untuk di gunakan sebagai pakaian formal ataupun kasual. Anda akan semakin bergaya dengan menggunakan kemeja ini, cocok untuk di gunakan dalam segala suasana seperti bekerja, menghadiri pesta, acara resmi, dll. 
+            </p>
+        </div>
+    </article>
+  </main>
+</div>
+</div>
+</div>
+
+<div data-role="page" id="Kemeja_2">
+    <div data-role="main" class="ui-content">
+        <div data-role="controlgroup" data-type="horizontal" >
+        <a href="index.html#home" class="ui-btn ui-icon-back ui-btn-icon-left" >Kembali</a>
+        <a href="index.html#pesanan_2" class="ui-btn ui-icon-shop ui-btn-icon-left" >Pesanan</a>
+        </div>
+
+<div class="detail">
+    <main class="produk">
+    <article>
+        <img src="img/kemeja_3.png" alt="">
+        <div class="text">
+            <h4>Kemeja B</h4>
+            <h4>Rp 85.000,-</h4>
+            <a href="index.html#Beli_2" class="ui-btn">Beli</a>
+            <p>
+            Kemeja Lengan Panjang Pria Slim Fit untuk anda yang ingin tampil lebih percaya diri . Kemeja yang memiliki desain slim fit membuat kemeja ini pas di tubuh anda dan tampilan anda semakin lebih bergaya dan rapi. Material Cotton membuat baju ini nyaman ketika di pakai.</p>
+            <p>
+            Kemeja lengan panjang slim fit ini cocok untuk di gunakan sebagai pakaian formal ataupun kasual. Anda akan semakin bergaya dengan menggunakan kemeja ini, cocok untuk di gunakan dalam segala suasana seperti bekerja, menghadiri pesta, acara resmi, dll. 
+            </p>
+        </div>
+    </article>
+  </main>
+</div>
+</div>
+</div>
+
+<div data-role="page" id="Kemeja_3">
+    <div data-role="main" class="ui-content">
+        <div data-role="controlgroup" data-type="horizontal" >
+        <a href="index.html#home" class="ui-btn ui-icon-back ui-btn-icon-left" >Kembali</a>
+        <a href="index.html#pesanan_3" class="ui-btn ui-icon-shop ui-btn-icon-left" >Pesanan</a>
+        </div>
+
+<div class="detail">
+    <main class="produk">
+    <article>
+        <img src="img/kemeja_4.jpg" alt="">
+        <div class="text">
+            <h4>Kemeja C</h4>
+            <h4>Rp 95.000,-</h4>
+            <a href="index.html#Beli_3" class="ui-btn">Beli</a>
+            <p>
+            Kemeja Lengan Panjang Pria Slim Fit untuk anda yang ingin tampil lebih percaya diri . Kemeja yang memiliki desain slim fit membuat kemeja ini pas di tubuh anda dan tampilan anda semakin lebih bergaya dan rapi. Material Cotton membuat baju ini nyaman ketika di pakai.</p>
+            <p>
+            Kemeja lengan panjang slim fit ini cocok untuk di gunakan sebagai pakaian formal ataupun kasual. Anda akan semakin bergaya dengan menggunakan kemeja ini, cocok untuk di gunakan dalam segala suasana seperti bekerja, menghadiri pesta, acara resmi, dll. 
+            </p>
+        </div>
+    </article>
+  </main>
+</div>
+</div>
+</div>
+
+<div data-role="page" id="Kemeja_4">
+    <div data-role="main" class="ui-content">
+        <div data-role="controlgroup" data-type="horizontal" >
+        <a href="index.html#home" class="ui-btn ui-icon-back ui-btn-icon-left" >Kembali</a>
+        <a href="index.html#pesanan_4" class="ui-btn ui-icon-shop ui-btn-icon-left" >Pesanan</a>
+        </div>
+
+<div class="detail">
+    <main class="produk">
+    <article>
+        <img src="img/kemeja_8.jpg" alt="">
+        <div class="text">
+            <h4>Kemeja D</h4>
+            <h4>Rp 105.000,-</h4>
+            <a href="index.html#Beli_4" class="ui-btn">Beli</a>
+            <p>
+            Kemeja Lengan Panjang Pria Slim Fit untuk anda yang ingin tampil lebih percaya diri . Kemeja yang memiliki desain slim fit membuat kemeja ini pas di tubuh anda dan tampilan anda semakin lebih bergaya dan rapi. Material Cotton membuat baju ini nyaman ketika di pakai.</p>
+            <p>
+            Kemeja lengan panjang slim fit ini cocok untuk di gunakan sebagai pakaian formal ataupun kasual. Anda akan semakin bergaya dengan menggunakan kemeja ini, cocok untuk di gunakan dalam segala suasana seperti bekerja, menghadiri pesta, acara resmi, dll. 
+            </p>
+        </div>
+    </article>
+  </main>
+</div>
+</div>
+</div>
+
+
+<!--Beli produk-->
+<div data-role="page" id="Beli_1">
+    <div data-role="header" >    
+        <a href="#" class="ui-btn ui-icon-back ui-btn-icon-left" data-rel="back">Kembali</a>
+        <a href="index.html#pesanan_1" class="ui-btn ui-icon-shop ui-btn-icon-left">Pesanan</a>
+    </div>
+    <br><br>
+
+    <div id="beli">  
+        <label for="nama">Nama Penerima</label>  
+        <input type="text" id="nama" />
+        <label for="no_hp">No HP</label>
+        <input type="text" id="no_hp" />
+        <label for="alamat">Alamat</label>  
+        <input type="text" id="alamat" />
+        <label for="banyak">Qty</label>  
+        <input type="text" id="banyak" />
+    
+        <form method="post" action="demoform.asp">
+            <fieldset class="ui-field-contain">
+                <label for="bayar">Pilih Metode Pembayaran</label>
+                <select id="bayar">
+                    <option value="COD (Bayar ditempat)">COD (Bayar ditempat)</option>
+                    <option value="Transfer Bank">Transfer Bank</option>
+                </select>
+            </fieldset>
+        </form>
+            
+            <a href="index.html#pesanan_1" class="ui-btn" id="btnBeli"> Beli Sekarang </a>  
+            <script type="text/javascript" src="cordova.js"></script>
+    </div>
+</div>
+
+<div data-role="page" id="Beli_2">
+    <div data-role="header" >
+        <a href="#" class="ui-btn ui-icon-back ui-btn-icon-left" data-rel="back">Kembali</a>
+        <a href="index.html#pesanan_2" class="ui-btn ui-icon-shop ui-btn-icon-left">Pesanan</a>
+    </div>
+    <br><br>
+
+    <div id="beli">
+        <label for="nama_2">Nama Penerima</label>  
+        <input type="text" id="nama_2" />
+        <label for="no_hp_2">No HP</label>  
+        <input type="text" id="no_hp_2" />
+        <label for="alamat_2">Alamat</label>  
+        <input type="text" id="alamat_2" />
+        <label for="banyak_2">Qty</label>  
+        <input type="text" id="banyak_2" />
+
+        <form method="post" action="demoform.asp">
+            <fieldset class="ui-field-contain">
+                <label for="bayar_2">Pilih Pembayaran</label>
+                <select id="bayar_2">
+                    <option value="COD (Bayar ditempat)">COD (Bayar ditempat)</option>
+                    <option value="Transfer Bank">Transfer Bank</option>
+                </select>
+            </fieldset>
+        </form>
+
+        <a href="index.html#pesanan_2" class="ui-btn" id="btnBeli_1"> Beli Sekarang </a>  
+        <script type="text/javascript" src="cordova.js"></script>
+    </div>
+</div>
+
+<div data-role="page" id="Beli_3">
+    <div data-role="header" >    
+        <a href="#" class="ui-btn ui-icon-back ui-btn-icon-left" data-rel="back">Kembali</a>
+        <a href="index.html#pesanan_3" class="ui-btn ui-icon-shop ui-btn-icon-left">Pesanan</a>
+    </div>
+    <br><br>
+
+    <div id="beli">  
+        <label for="nama_3">Nama Penerima</label>  
+        <input type="text" id="nama_3" />
+        <label for="no_hp_3">No HP</label>  
+        <input type="text" id="no_hp_3" />
+        <label for="alamat_3">Alamat</label>  
+        <input type="text" id="alamat_3" />
+        <label for="banyak_3">Qty</label>  
+        <input type="text" id="banyak_3" />
+
+        <form method="post" action="demoform.asp">
+            <fieldset class="ui-field-contain">
+                <label for="bayar_3">Pilih Pembayaran</label>
+                <select id="bayar_3">
+                    <option value="COD (Bayar ditempat)">COD (Bayar ditempat)</option>
+                    <option value="Transfer Bank">Transfer Bank</option>
+                </select>
+            </fieldset>
+        </form>
+
+        <a href="index.html#pesanan_3" class="ui-btn" id="btnBeli_2"> Beli Sekarang </a>  
+        <script type="text/javascript" src="cordova.js"></script>
+
+    </div>
+</div>
+
+<div data-role="page" id="Beli_4">
+    <div data-role="header" >
+        <a href="#" class="ui-btn ui-icon-back ui-btn-icon-left" data-rel="back">Kembali</a>
+        <a href="index.html#pesanan_4" class="ui-btn ui-icon-shop ui-btn-icon-left">Pesanan</a>
+    </div>
+    <br><br>
+
+    <div id="beli">  
+        <label for="nama_4">Nama Penerima</label>  
+        <input type="text" id="nama_4" />
+        <label for="no_hp_4">No HP</label>  
+        <input type="text" id="no_hp_4" />
+        <label for="alamat_4">Alamat</label>  
+        <input type="text" id="alamat_4" />
+        <label for="banyak_4">Qty</label>  
+        <input type="text" id="banyak_4" />
+    
+        <form method="post" action="demoform.asp">
+            <fieldset class="ui-field-contain">
+                <label for="bayar_4">Pilih Pembayaran</label>
+                <select id="bayar_4">
+                    <option value="COD (Bayar ditempat)">COD (Bayar ditempat)</option>
+                    <option value="Transfer Bank">Transfer Bank</option>
+                </select>
+            </fieldset>
+        </form>
+
+        <a href="index.html#pesanan_4" class="ui-btn" id="btnBeli_3"> Beli Sekarang </a>  
+        <script type="text/javascript" src="cordova.js"></script>
+    </div>
+</div>
+
+
+<!--Pesanan-->
+<div data-role="page" id="pesanan_1">
+<div data-role="header" >    
+    <div data-role="controlgroup" data-type="horizontal" >
+    <a href="#" class="ui-btn ui-icon-back ui-btn-icon-left" data-rel="back">Kembali</a>
+    <a href="index.html#home" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a>
+    </div>
+  </div>
+
+<div class="pesanan">
+    <main class="pemesan">
+    <article>
+        <div class="text_pesanan">
+            <center>
+                <h3>Pesanan Saya</h3>
+                <table>
+                    <tr>
+                        <td width="160px">Produk</td>
+                        <td>:&emsp;</td>
+                        <td><div id="produk_1"></div></td>
+                    </tr>
+                    <tr>
+                        <td width="160px">Harga</td>
+                        <td>:&emsp;</td>
+                        <td><div id="harga_1"></div></td>
+                    </tr>
+                    <tr>
+                        <td width="160px">Qty</td>
+                        <td>:&emsp;</td>
+                        <td><div id="e"></div></td>
+                    </tr>
+                    <tr>
+                        <td width="160px">Ongkir</td>
+                        <td>:&emsp;</td>
+                        <td><div id="ongkir_1"></div></td>
+                    </tr>
+                    <tr>
+                        <td width="160px">Total Pesanan</td>
+                        <td>:&emsp;</td>
+                        <td><div id="f"></div></td>
+                    </tr>
+                    <tr>
+                        <td width="160px">Nama Pemesan</td>                        
+                        <td>:&emsp;</td>
+                        <td><div id="a"></div></td>
+                    </tr>
+                    <tr>
+                        <td width="160px">No HP</td>          
+                        <td>:&emsp;</td>
+                        <td><div id="b"></div></td>
+                    </tr>
+                    <tr>
+                        <td width="160px">Alamat</td>
+                        <td>:&emsp;</td>
+                        <td><div id="c"></div></td>
+                    </tr>
+                    <tr>
+                        <td width="160px">Metode Pembayaran</td>              
+                        <td>:&emsp;</td>
+                        <td><div id="d"></div></td>
+                    </tr>
+                </table>
+            </center><br><br>
+        </div>
+    </article>
+  </main>
+</div>
+</div>
+
+<div data-role="page" id="pesanan_2">
+<div data-role="header" >    
+    <div data-role="controlgroup" data-type="horizontal" >
+    <a href="#" class="ui-btn ui-icon-back ui-btn-icon-left" data-rel="back">Kembali</a>
+    <a href="index.html#home" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a>
+    </div>
+  </div>
+
+<div class="pesanan">
+    <main class="pemesan">
+    <article>
+        <div class="text_pesanan">
+            <center>
+                <h3>Pesanan Saya</h3>
+                <table>
+                    <tr>
+                        <td width="160px">Produk</td>
+                        <td>:&emsp;</td>
+                        <td><div id="produk_2"></div></td>
+                    </tr>
+                    <tr>
+                        <td width="160px">Harga</td>
+                        <td>:&emsp;</td>
+                        <td><div id="harga_2"></div></td>
+                    </tr>
+                    <tr>
+                        <td width="160px">Qty</td>
+                        <td>:&emsp;</td>
+                        <td><div id="e_2"></div></td>
+                    </tr>
+                    <tr>
+                        <td width="160px">Ongkir</td>
+                        <td>:&emsp;</td>
+                        <td><div id="ongkir_2"></div></td>
+                    </tr>
+                    <tr>
+                        <td width="160px">Total Pesanan</td>
+                        <td>:&emsp;</td>
+                        <td><div id="f_2"></div></td>
+                    </tr>
+                    <tr>
+                        <td width="160px">Nama Pemesan</td>                        
+                        <td>:&emsp;</td>
+                        <td><div id="a_2"></div></td>
+                    </tr>
+                    <tr>
+                        <td width="160px">No HP</td>          
+                        <td>:&emsp;</td>
+                        <td><div id="b_2"></div></td>
+                    </tr>
+                    <tr>
+                        <td width="160px">Alamat</td>
+                        <td>:&emsp;</td>
+                        <td><div id="c_2"></div></td>
+                    </tr>
+                    <tr>
+                        <td width="160px">Pembayaran</td>              
+                        <td>:&emsp;</td>
+                        <td><div id="d_2"></div></td>
+                    </tr>
+                </table>
+            </center><br><br>
+        </div>
+    </article>
+  </main>
+</div>
+</div>
+
+<div data-role="page" id="pesanan_3">
+<div data-role="header" >    
+    <div data-role="controlgroup" data-type="horizontal" >
+    <a href="#" class="ui-btn ui-icon-back ui-btn-icon-left" data-rel="back">Kembali</a>
+    <a href="index.html#home" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a>
+    </div>
+  </div>
+
+<div class="pesanan">
+    <main class="pemesan">
+    <article>
+        <div class="text_pesanan">
+            <center>
+                <h3>Pesanan Saya</h3>
+                <table>
+                    <tr>
+                        <td width="160px">Produk</td>
+                        <td>:&emsp;</td>
+                        <td><div id="produk_3"></div></td>
+                    </tr>
+                    <tr>
+                        <td width="160px">Harga</td>
+                        <td>:&emsp;</td>
+                        <td><div id="harga_3"></div></td>
+                    </tr>
+                    <tr>
+                        <td width="160px">Qty</td>
+                        <td>:&emsp;</td>
+                        <td><div id="e_3"></div></td>
+                    </tr>
+                    <tr>
+                        <td width="160px">Ongkir</td>
+                        <td>:&emsp;</td>
+                        <td><div id="ongkir_3"></div></td>
+                    </tr>
+                    <tr>
+                        <td width="160px">Total Pesanan</td>
+                        <td>:&emsp;</td>
+                        <td><div id="f_3"></div></td>
+                    </tr>
+                    <tr>
+                        <td width="160px">Nama Pemesan</td>                        
+                        <td>:&emsp;</td>
+                        <td><div id="a_3"></div></td>
+                    </tr>
+                    <tr>
+                        <td width="160px">No HP</td>          
+                        <td>:&emsp;</td>
+                        <td><div id="b_3"></div></td>
+                    </tr>
+                    <tr>
+                        <td width="160px">Alamat</td>
+                        <td>:&emsp;</td>
+                        <td><div id="c_3"></div></td>
+                    </tr>
+                    <tr>
+                        <td width="160px">Pembayaran</td>              
+                        <td>:&emsp;</td>
+                        <td><div id="d_3"></div></td>
+                    </tr>
+                </table>
+            </center><br><br>
+        </div>
+    </article>
+  </main>
+</div>
+</div>
+
+<div data-role="page" id="pesanan_4">
+<div data-role="header" >    
+    <div data-role="controlgroup" data-type="horizontal" >
+    <a href="#" class="ui-btn ui-icon-back ui-btn-icon-left" data-rel="back">Kembali</a>
+    <a href="index.html#home" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a>
+    </div>
+  </div>
+
+<div class="pesanan">
+    <main class="pemesan">
+    <article>
+        <div class="text_pesanan">
+            <center>
+                <h3>Pesanan Saya</h3>
+                <table>
+                    <tr>
+                        <td width="160px">Produk</td>
+                        <td>:&emsp;</td>
+                        <td><div id="produk_4"></div></td>
+                    </tr>
+                    <tr>
+                        <td width="160px">Harga</td>
+                        <td>:&emsp;</td>
+                        <td><div id="harga_4"></div></td>
+                    </tr>
+                    <tr>
+                        <td width="160px">Qty</td>
+                        <td>:&emsp;</td>
+                        <td><div id="e_4"></div></td>
+                    </tr>
+                    <tr>
+                        <td width="160px">Ongkir</td>
+                        <td>:&emsp;</td>
+                        <td><div id="ongkir_4"></div></td>
+                    </tr>
+                    <tr>
+                        <td width="160px">Total Pesanan</td>
+                        <td>:&emsp;</td>
+                        <td><div id="f_4"></div></td>
+                    </tr>
+                    <tr>
+                        <td width="160px">Nama Pemesan</td>                        
+                        <td>:&emsp;</td>
+                        <td><div id="a_4"></div></td>
+                    </tr>
+                    <tr>
+                        <td width="160px">No HP</td>          
+                        <td>:&emsp;</td>
+                        <td><div id="b_4"></div></td>
+                    </tr>
+                    <tr>
+                        <td width="160px">Alamat</td>
+                        <td>:&emsp;</td>
+                        <td><div id="c_4"></div></td>
+                    </tr>
+                    <tr>
+                        <td width="160px">Pembayaran</td>              
+                        <td>:&emsp;</td>
+                        <td><div id="d_4"></div></td>
+                    </tr>
+                </table>
+            </center><br><br>
+        </div>
+    </article>
+  </main>
+</div>
+</div>
+
+</body>
+</html>
